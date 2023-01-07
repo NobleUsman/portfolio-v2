@@ -20,13 +20,14 @@ type Props = {
 
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter()
+  console.log('router ===> ', router)
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
   return (
     <Layout preview={preview}>
       <Container>
-        <Header />
+        <Header /> {/* put back to blog button in here */}
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -68,7 +69,7 @@ export async function getStaticProps({ params }: Params) {
     'content',
     'ogImage',
     'coverImage',
-  ])
+  ], 'blog')
   const content = await markdownToHtml(post.content || '')
 
   return {
@@ -82,7 +83,15 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug'], 'blog')
+
+  // ! doesnt gets called in getStaticPaths
+  // const tilposts = getAllPosts([
+  //   'title',
+  //   'slug',
+  // ], 'til')
+  
+  // console.log('tilPosts ===> ', tilposts)
 
   return {
     paths: posts.map((post) => {

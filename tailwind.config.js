@@ -4,11 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
+        white: '#FFFFFF', // texts
+        gray: '#BEB6B6', // links, footer links
+        accent: '#75FFE5', // highlights, accents
+        'light-blue': '#001432', // body
+        'dark-blue': '#000c1e', // navigation
+      },
+      fontFamily: {
+        base: ["DM Sans", "sans-serif"],
       },
       spacing: {
         28: '7rem',
@@ -33,3 +36,12 @@ module.exports = {
   },
   plugins: [],
 }
+// Light Blue ( #001432 ) light blue - body
+// Dark Blue ( #000c1e ) dark blue - navbar
+// // Cyan ( #21e6c1 ) aqua - body icons, headings, logo
+// // Gray ( #ffffff8c ) - links
+// white ( #ffffff )
+
+// COLOR BLIND CONTRAST OKAY for foreground colors on both backgrounds
+// - CYAN ( #75FFE5 )
+// - GRAY ( #BEB6B6 )

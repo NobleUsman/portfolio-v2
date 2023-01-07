@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans-Regular.ttf");
+}
+
+body {
+  @apply font-base;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #79FFE1 transparent;  /* scroll "thumb" and "track" color | (previous #59636b) */
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8.5px; /* 12px */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent; /* transparent */
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #79FFE1;
+  /* border-radius: 25px; */
+  /* border: 2px solid transparent; 3px #59636b */
+}
+
+.nav-link {
+  @apply outline-none border-b-2 border-transparent hover:text-accent active:border-accent focus:text-accent focus:border-b-2 focus:border-accent pb-2 transition-all duration-500 ease-out
+}
