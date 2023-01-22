@@ -1,33 +1,33 @@
-import { getPostBySlug, getAllPosts } from "../../lib/api";
-import markdownToHtml from "../../lib/markdownToHtml";
-import type PostType from "../../interfaces/post";
-import Post from "../../components/post";
+import { getPostBySlug, getAllPosts } from "../../../lib/api";
+import markdownToHtml from "../../../lib/markdownToHtml";
+import type PostType from "../../../interfaces/post";
+import Post from "../../../components/post";
 
 type Props = {
   post: PostType;
   preview?: boolean;
 };
 
-export default function Blog({ post, preview }: Props) {
+export default function TILPost({ post, preview }: Props) {
   const navigateBackTo = {
-    url: "/articles",
-    title: "articles",
+    url: "/articles/today-i-learned",
+    title: "today i learned",
   };
 
-  return <Post post={post} postType="blog" navigateBackTo={navigateBackTo} />;
+  return <Post post={post} postType="til" navigateBackTo={navigateBackTo} />;
 }
 
 type Params = {
   params: {
-    slug: string;
+    tilPostSlug: string;
   };
 };
 
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(
-    params.slug,
+    params.tilPostSlug,
     ["title", "date", "slug", "author", "content", "ogImage", "coverImage"],
-    "blog"
+    "til"
   );
   const content = await markdownToHtml(post.content || "");
 
@@ -42,13 +42,13 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"], "blog");
+  const posts = getAllPosts(["slug"], "til");
 
   return {
     paths: posts.map((post) => {
       return {
         params: {
-          slug: post.slug,
+          tilPostSlug: post.slug,
         },
       };
     }),

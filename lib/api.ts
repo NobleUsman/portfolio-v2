@@ -70,20 +70,5 @@ export function getAllPosts(fields: string[] = [], type: FetchPostType) {
     .map((slug) => getPostBySlug(slug, fields, type))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
-  console.log('posts ====> ', posts)
   return posts
 }
-
-console.log('blogfilenames ======> ', getPostSlugs('blog'))
-console.log('tilfilenames ======> ', getPostSlugs('til'))
-
-// const tilPosts = getAllPosts([
-//   'title',
-//   'date',
-//   'slug',
-//   'author',
-//   'coverImage',
-//   'excerpt',
-// ], 'til')
-
-// console.log('tilPosts ===> ', tilPosts)

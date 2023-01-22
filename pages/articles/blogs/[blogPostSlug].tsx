@@ -1,17 +1,17 @@
-import { getPostBySlug, getAllPosts } from "../../lib/api";
-import markdownToHtml from "../../lib/markdownToHtml";
-import type PostType from "../../interfaces/post";
-import Post from "../../components/post";
+import { getPostBySlug, getAllPosts } from "../../../lib/api";
+import markdownToHtml from "../../../lib/markdownToHtml";
+import type PostType from "../../../interfaces/post";
+import Post from "../../../components/post";
 
 type Props = {
   post: PostType;
   preview?: boolean;
 };
 
-export default function Blog({ post, preview }: Props) {
+export default function BlogPost({ post, preview }: Props) {
   const navigateBackTo = {
-    url: "/articles",
-    title: "articles",
+    url: "/articles/blogs",
+    title: "blogs",
   };
 
   return <Post post={post} postType="blog" navigateBackTo={navigateBackTo} />;
@@ -19,13 +19,13 @@ export default function Blog({ post, preview }: Props) {
 
 type Params = {
   params: {
-    slug: string;
+    blogPostSlug: string;
   };
 };
 
 export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(
-    params.slug,
+    params.blogPostSlug,
     ["title", "date", "slug", "author", "content", "ogImage", "coverImage"],
     "blog"
   );
@@ -48,7 +48,7 @@ export async function getStaticPaths() {
     paths: posts.map((post) => {
       return {
         params: {
-          slug: post.slug,
+          blogPostSlug: post.slug,
         },
       };
     }),

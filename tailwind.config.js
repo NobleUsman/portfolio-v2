@@ -13,6 +13,12 @@ module.exports = {
       fontFamily: {
         base: ["DM Sans", "sans-serif"],
       },
+      gridTemplateColumns: {
+        'grid-cols-centered-content': '12rem auto 12rem',
+      },
+      backgroundColor: {
+        'overlay': 'rgb(173 171 171 / 50%)',
+      },
       spacing: {
         28: '7rem',
       },

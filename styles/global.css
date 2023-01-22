@@ -8,7 +8,9 @@
 }
 
 body {
-  @apply font-base;
+  /* use 'text-light-blue bg-white' in light-mode  */
+  @apply font-base text-white bg-light-blue;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Works on Firefox */
@@ -23,14 +25,24 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent; /* transparent */
+  @apply bg-transparent;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #79FFE1;
+  @apply bg-accent;
   /* border-radius: 25px; */
   /* border: 2px solid transparent; 3px #59636b */
 }
 
 .nav-link {
   @apply outline-none border-b-2 border-transparent hover:text-accent active:border-accent focus:text-accent focus:border-b-2 focus:border-accent pb-2 transition-all duration-500 ease-out
+}
+
+.header-bg {
+  /* background-color: rgba(0,0,0,.5); */
+  background-color: rgb(173 171 171 / 50%);
+  /* @apply w-full h-full fixed transition-all duration-500; */
+}
+
+.sidebar-overlay {
+  background-color: rgb(173 171 171 / 50%);
 }

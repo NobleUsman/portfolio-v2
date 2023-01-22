@@ -1,17 +1,19 @@
-import PostPreview from './post-preview'
-import type Post from '../interfaces/post'
+import PostPreview from "./post-preview";
+import type Post from "../interfaces/post";
+import FetchPostType from "../interfaces/fetchPostType";
 
 type Props = {
-  posts: Post[],
-  title?: string
-}
+  posts: Post[];
+  postType: FetchPostType;
+  children?: React.ReactNode;
+};
 
-const MorePosts = ({ posts, title = "More Posts" }: Props) => {
+const MorePosts = ({ posts, postType, children }: Props) => {
   return (
     <section>
-      <h2 className="mb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
-        {title}
-      </h2>
+      {/* this node will contain posts-type title for articles page */}
+      {children}
+
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
         {posts.map((post) => (
           <PostPreview
@@ -22,11 +24,12 @@ const MorePosts = ({ posts, title = "More Posts" }: Props) => {
             author={post.author}
             slug={post.slug}
             excerpt={post.excerpt}
+            postType={postType}
           />
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default MorePosts
+export default MorePosts;

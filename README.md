@@ -41,3 +41,8 @@ To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) a
 ### Content changes
 
 - **IMP, re-think & change**
+
+### Progress
+
+- hide `<HeroPost> & <CoverImage>` if not setting cover image and hero post
+- `heropost & postpreview` needs `coverpage`, though its looking great
