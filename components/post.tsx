@@ -6,7 +6,6 @@ import NavigateBackTo from "../components/navigatebackto";
 import PostHeader from "../components/post-header";
 import PostTitle from "../components/post-title";
 import Head from "next/head";
-import { CMS_NAME } from "../lib/constants";
 import type PostType from "../interfaces/post";
 import Footer from "../components/footer";
 import FetchPostType from "../interfaces/fetchPostType";

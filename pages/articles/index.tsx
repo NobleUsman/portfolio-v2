@@ -6,7 +6,6 @@ import Head from "next/head";
 import Post from "../../interfaces/post";
 import Footer from "../../components/footer";
 import HeroPost from "../../components/hero-post";
-import { CMS_NAME } from "../../lib/constants";
 
 type Props = {
   allBlogPosts: Post[];
