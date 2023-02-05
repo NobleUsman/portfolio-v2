@@ -1,4 +1,27 @@
-export const EXAMPLE_PATH = 'blog-starter'
-export const CMS_NAME = 'Markdown'
+export const META_KEYWORDS =
+  "usman,shaikh,portfolio,blog,website,full,developer,front-end,usmanshaikh";
+
+export const META_VIEWPORT =
+  "height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi";
+
+export const META_NAME = "Usman";
+
+export const META_DESC =
+  "Hey 👋, I’m a Front-End Developer based out of Mumbai, who aims to combine the beauty of design with the logical perfection of coding.";
+
+export const META_SUBJECT =
+  "Hey 👋, this is my portfolio where I showcase my work and some writes.";
+
+export const HOME_OG_TITLE = "Usman Shaikh | Front End Developer";
+
+export const HOME_OG_IMAGE_ALT = "Portfolio Cover Image";
+
+export const TWITTER_HANDLE = "@heyusmanhere";
+
+// TODO: --- to be changed ---
+
+// change to svg
 export const HOME_OG_IMAGE_URL =
-  'https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg'
+  "https://www.nobleusman.com/img/social-cover.png";
+
+export const HOME_OG_URL = "https://www.nobleusman.com/";

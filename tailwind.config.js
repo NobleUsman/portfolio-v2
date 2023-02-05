@@ -7,7 +7,7 @@ module.exports = {
         white: '#FFFFFF', // texts
         gray: '#BEB6B6', // links, footer links
         accent: '#75FFE5', // highlights, accents
-        'light-blue': '#001432', // body
+        'light-blue': '#001432', // main, selection hightlight text
         'dark-blue': '#000c1e', // navigation
       },
       fontFamily: {
@@ -15,9 +15,6 @@ module.exports = {
       },
       gridTemplateColumns: {
         'grid-cols-centered-content': '12rem auto 12rem',
-      },
-      backgroundColor: {
-        'overlay': 'rgb(173 171 171 / 50%)',
       },
       spacing: {
         28: '7rem',

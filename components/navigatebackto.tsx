@@ -10,7 +10,7 @@ type Props = {
 const NavigateBackTo = ({ url, title, position }: Props) => {
   return (
     <h2
-      className={`text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight ${
+      className={`text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight max-xl:mt-20 ${
         position === "top" ? "mb-20 mt-8" : "mb-8 mt-20"
       }`}
     >

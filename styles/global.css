@@ -5,18 +5,34 @@
 @font-face {
   font-family: "DM Sans";
   src: url("/fonts/DMSans-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
 }
 
 body {
   /* use 'text-light-blue bg-white' in light-mode  */
-  @apply font-base text-white bg-light-blue;
-  -webkit-tap-highlight-color: transparent;
+  /* selection highlight color defined here --- */
+  @apply font-base text-white bg-light-blue selection:text-light-blue selection:bg-accent/[.99];
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 /* Works on Firefox */
 * {
   scrollbar-width: thin; /* "auto" or "thin" */
-  scrollbar-color: #79FFE1 transparent;  /* scroll "thumb" and "track" color | (previous #59636b) */
+  scrollbar-color: #75FFE5 transparent;  /* scroll "thumb" and "track" color */
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -25,7 +41,8 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  @apply bg-transparent;
+  @apply bg-light-blue;
+  /* background: transparent !important; transparent */
 }
 *::-webkit-scrollbar-thumb {
   @apply bg-accent;
@@ -33,16 +50,10 @@ body {
   /* border: 2px solid transparent; 3px #59636b */
 }
 
+nav ::-webkit-scrollbar-track {
+  @apply bg-dark-blue;
+}
+
 .nav-link {
   @apply outline-none border-b-2 border-transparent hover:text-accent active:border-accent focus:text-accent focus:border-b-2 focus:border-accent pb-2 transition-all duration-500 ease-out
-}
-
-.header-bg {
-  /* background-color: rgba(0,0,0,.5); */
-  background-color: rgb(173 171 171 / 50%);
-  /* @apply w-full h-full fixed transition-all duration-500; */
-}
-
-.sidebar-overlay {
-  background-color: rgb(173 171 171 / 50%);
 }

@@ -46,3 +46,25 @@ To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) a
 
 - hide `<HeroPost> & <CoverImage>` if not setting cover image and hero post
 - `heropost & postpreview` needs `coverpage`, though its looking great
+- remove home page slug
+- `<HeroPost>` should not be shown in MorePosts list, or else, double items are showing
+
+### Changes
+
+- Opted out 'safari-pinned-tab-icon' as I prefer a multi-colored icon
+
+## Lighthouse results
+
+- LCP affected by "above the fold"(page view without scroll) image being lazy loaded, it shouldn't be, read next/image
+- Extensions negatively affecting performance in lighthouse score, disable them in incognito when running audit
+
+## Before Deployment
+
+- run lighthouse audit
+- check browser support
+- change meta constants
+
+## Need to be done
+
+- "google-site-verification" meta
+- custom error and loading page
