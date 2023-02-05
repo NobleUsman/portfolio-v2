@@ -5,7 +5,6 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 import Post from '../interfaces/post'
 
 // ! this page will be "hero section"
@@ -21,7 +20,7 @@ export default function Index({ allPosts }: Props) {
     <>
       {/* <Layout> */}
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Next.js Blog Example with base</title>
         </Head>
         <Container>
           <Intro title='homepage intro comp' />
