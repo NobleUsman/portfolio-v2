@@ -17,7 +17,7 @@ const Meta = () => {
     <Head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content={META_VIEWPORT} />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
       {/* Common */}
       <meta name="keywords" content={META_KEYWORDS} />

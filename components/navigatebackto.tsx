@@ -14,7 +14,7 @@ const NavigateBackTo = ({ url, title, position }: Props) => {
         position === "top" ? "mb-20 mt-8" : "mb-8 mt-20"
       }`}
     >
-      <Link href={url} className="nav-link lg:tracking-wide">
+      <Link href={url} className="nav-link pb-2 lg:tracking-wide">
         <ImArrowLeft2 className="text-accent w-4 md:w-8 mr-1 md:mr-2 -mt-1 md:-mt-2 inline-block" />
         back to {title}
       </Link>

@@ -55,5 +55,5 @@ nav ::-webkit-scrollbar-track {
 }
 
 .nav-link {
-  @apply outline-none border-b-2 border-transparent hover:text-accent active:border-accent focus:text-accent focus:border-b-2 focus:border-accent pb-2 transition-all duration-500 ease-out
+  @apply outline-none border-b-2 border-transparent hover:text-accent active:border-accent focus:text-accent focus:border-b-2 focus:border-accent transition-all duration-500 ease-out
 }

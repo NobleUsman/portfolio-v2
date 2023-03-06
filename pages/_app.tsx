@@ -34,7 +34,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
     <>
       {/* put loading inside layout conditionally */}
-      {
+      {/* {
         isLoading ? 
           <div>loaaaadinggggg .....</div>
         :
@@ -43,7 +43,18 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             <Component {...pageProps} />
           </Layout>
         )
-      }
+      } */}
+
+      <Layout>
+        {
+          !isLoading ? (
+            <Component {...pageProps} />
+          ) : (
+            <div>loaaaadinggggg .....</div>
+          )
+        }
+      </Layout>
+
     </>
   )
 }

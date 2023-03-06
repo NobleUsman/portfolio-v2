@@ -51,7 +51,10 @@ const Layout = ({ preview, children }: Props) => {
         {/* <Alert preview={preview} /> */}
         <div className="grid xl:grid-cols-grid-cols-centered-content h-screen">
 
-          <aside>
+          <aside className="relative">
+
+            <div onClick={toggleSidebar} className={`fixed h-screen w-screen transition-all duration-500 ${isSideBarOpen ? "backdrop-blur-sm" : "invisible"} xl:hidden`}></div>
+
             <header className={`z-10 text-white ${isSideBarOpen ? "translate-x-0" : "-translate-x-full"} max-xl:shadow-2xl xl:translate-x-0 w-64 xl:w-48 h-screen fixed transition-all ease-in-out duration-500`}>
 
               <nav className={`bg-dark-blue h-[inherit] relative selection:text-dark-blue`}>
@@ -77,8 +80,7 @@ const Layout = ({ preview, children }: Props) => {
 
           <main>{children}</main>
 
-          {/* using desktop view's 3rd grid box as overlay for mobile sidebar */}
-          <div onClick={toggleSidebar} className={`w-full h-full fixed ${isSideBarOpen ? "backdrop-blur-sm" : "invisible"} transition-all duration-500 xl:static xl:bg-inherit`}></div>
+          <div className={`hidden xl:block`}></div>
         </div>
  
           {/* To not show Footer on Hero Page */}

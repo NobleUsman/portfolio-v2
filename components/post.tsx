@@ -41,7 +41,7 @@ export default function Post({ post, navigateBackTo, postType, preview }: Props)
       ) : (
         <>
           <Head>
-            <title>{post.title} | Usman Shaikh</title>
+            <title>{`${post.title} | Usman Shaikh`}</title>
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
 

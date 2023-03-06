@@ -63,8 +63,12 @@ To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) a
 - run lighthouse audit
 - check browser support
 - change meta constants
+- [Minify Tailwind classes](https://tailwindcss.com/docs/optimizing-for-production)
 
 ## Need to be done
 
 - "google-site-verification" meta
 - custom error and loading page
+- (later for SEO) generate sitemap from [this site](https://www.xml-sitemaps.com/) and submit to Google
+- (later for SEO) take inspiration from stefanjudis
+- (later for SEO), like how stefan has set, each page has its own title and desc, rest of meta is same, blog pages too will have title & desc(excerpt)
