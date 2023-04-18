@@ -16,6 +16,82 @@ module.exports = {
       gridTemplateColumns: {
         'grid-cols-centered-content': '12rem auto 12rem',
       },
+      keyframes: {
+        determinateProgress: {
+          // @keyframes determinateAnimation {
+          //   0% {
+          //     transform: translateX(-100%) scaleX(0);
+          //   }
+          //   100% {
+          //     transform: translateX(0) scaleX(1);
+          //   }
+          // }
+          '0%': {
+            transform: 'translateX(-100%) scaleX(0)',
+          },
+          '100%': {
+            transform: 'translateX(0) scaleX(1)'
+          },
+        },
+        indeterminateProgress: {
+          '0%': {
+            transform: 'translateX(0) scaleX(0)',
+          },
+          '40%': {
+            transform: 'translateX(0) scaleX(0.4)',
+          },
+          '100%': {
+            transform: 'translateX(100%) scaleX(0.5)'
+          },
+        },
+        fadeInLeft: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(-50px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
+        fadeIn: {
+          '0%': {
+            opacity: '0',
+          },
+          '100%': {
+            opacity: '1',
+          },
+        },
+        fadeOut: {
+          '0%': {
+            opacity: '1',
+          },
+          '100%': {
+            opacity: '0',
+          },
+        },
+        fadeOutRight: {
+          '0%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            opacity: '0',
+            transform: 'translateX(50px)',
+          },
+        },
+      },
+      animation: {
+        // animation-name, animation-duration, animation-timing-function, animation-iteration-count?,
+        // USAGE in file without 'animation' config : animate-[determinateProgress_2s_ease-out_1]
+        // USAGE in file with 'animation' config : animate-determinateProgress
+        determinateProgress: "determinateProgress 1.3s ease-out 1",
+        inDeterminateProgress: "indeterminateProgress 1s linear infinite",
+        fadeInLeft: "fadeInLeft 1s ease-in-out 1",
+        fadeOutRight: "fadeOutRight 1s ease-in-out 1",
+        fadeIn: "fadeIn 1s ease-in-out 1",
+        fadeOut: "fadeOut 1s ease-in-out 1",
+      },
       spacing: {
         28: '7rem',
       },

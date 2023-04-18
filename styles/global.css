@@ -57,3 +57,17 @@ nav ::-webkit-scrollbar-track {
 .nav-link {
   @apply outline-none border-b-2 border-transparent hover:text-accent active:border-accent focus:text-accent focus:border-b-2 focus:border-accent transition-all duration-500 ease-out
 }
+
+.show-loader {
+  visibility: visible;
+  opacity: 1;
+  /* transition: opacity 1s linear; */
+  transition: opacity 1.5s ease-in;
+}
+
+.hide-loader {
+  visibility: hidden;
+  opacity: 0;
+  /* transition: visibility 0s 1s, opacity 1s linear; */
+  transition: visibility 0s 0.5s, opacity 0.5s ease-out;
+}

@@ -7,6 +7,8 @@ import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import Post from '../interfaces/post'
 
+import Progress from '../components/progress'
+
 // ! this page will be "hero section"
 
 type Props = {
@@ -23,6 +25,16 @@ export default function Index({ allPosts }: Props) {
           <title>Next.js Blog Example with base</title>
         </Head>
         <Container>
+
+          {/* <div className='w-1/2'>
+            <Progress width={70} type='determinate' />
+            <br />
+            <Progress width={30} type='determinate' />
+            <br />
+            <Progress type='indeterminate' />
+          </div> */}
+          
+
           <Intro title='homepage intro comp' />
           {heroPost && (
             <HeroPost

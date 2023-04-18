@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import Logo from "./logo";
 
 const SideNavbar = () => {
 
@@ -22,7 +23,7 @@ const SideNavbar = () => {
           <div>check</div>
       </div> */}
 
-      <div className="flex flex-col items-center mx-20 xl:mx-12 pt-12 xl:pt-0 select-none cursor-pointer">
+      {/* <div className="flex flex-col items-center mx-20 xl:mx-12 pt-12 xl:pt-0 select-none cursor-pointer">
         <Image src={`/assets/brand/brand-dark.svg`} alt={`Usman Shaikh Logo`} width={500} height={500} priority={true} />
         
         <div className="font-bold text-3xl leading-none">
@@ -32,7 +33,12 @@ const SideNavbar = () => {
 
         <div className="w-full text-center border-t border-t-white text-xs tracking-wider mt-1">web developer</div>
 
+      </div> */}
+
+      <div>
+        <Logo />
       </div>
+
 
       <div className="flex flex-col items-center text-gray font-medium border-t border-b border-gray py-4 my-4">
         <Link href="/posts/dynamic-routing" className="nav-link py-2 px-4 xl:px-0">
